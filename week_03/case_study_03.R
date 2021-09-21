@@ -2,8 +2,10 @@ library(ggplot2)
 library(gapminder)
 library(dplyr)
 
-plot <- gapminder %>% 
-  filter(country != "Kuwait") %>% 
+gapminder_filtered <- gapminder %>% 
+  filter(country != "Kuwait")
+
+plot <- gapminder_filtered %>% 
   ggplot(aes(x = lifeExp, y = gdpPercap)) + 
   geom_point(aes(color = continent, size = pop / 100000)) + 
   facet_wrap(~year, nrow = 1) + 
@@ -22,7 +24,7 @@ ggsave("case_study_03_plt01.png",
        width = 20, 
        height = 5)
 
-gapminder_continent <- gapminder %>% 
+gapminder_continent <- gapminder_filtered %>% 
   group_by(continent, year) %>% 
   summarize(gdpPercapweighted = weighted.mean(x = gdpPercap, w = pop), 
             pop = sum(as.numeric(pop)))
