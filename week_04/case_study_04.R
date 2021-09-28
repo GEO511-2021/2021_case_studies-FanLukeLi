@@ -8,7 +8,7 @@ View(airports)
 Joined_flights_origin <- flights %>% 
   filter(origin == "JFK" | origin == "LGA" | origin == "EWR") %>% 
   arrange(desc(distance)) %>% 
-  left_join(airports, by = c("dest" = "faa", "origin" == "faa"))
+  left_join(airports, by = c("dest" = "faa"))
 
 Joined_flights_dest <- flights %>% 
   filter(dest == "JFK" | dest == "LGA" | dest == "EWR") %>% 
