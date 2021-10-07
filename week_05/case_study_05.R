@@ -22,7 +22,7 @@ new_york_area <- new_york[4]
 border <-
   st_intersection(canada_buffer, new_york_area)
 
-ggplot() + 
+plot_new_york_buffer <- ggplot() + 
   geom_sf(data = new_york[1]) + 
   geom_sf(data = border, fill = "red") + 
   labs(title = "New York Land within 10km") + 
