@@ -1,0 +1,36 @@
+---
+title: "Project proposal"
+author: Fan Li
+date: October 14, 2021
+output: github_document
+---
+
+# Introduction to problem/question
+  
+# Problem / Question
+There are many shooting incidents in New York city each year. Are the occurrences of these shooting incidents 
+random or are they spatially dependent? This project uses spatial autocorrelation to test spatial heterogeneity
+in New York city shooting incident each year from 2006 to 2021. Then, this project uses cluster 
+detection algorithms to capture these spatial clusters and finally map them according to layers grouped by year. 
+
+# Inspiring Examples
+
+## Example 1
+[Space-Time Clustering of Crime Events and Neighborhood Characteristics in Houston](https://heinonline-org.gate.lib.buffalo.edu/HOL/Page?lname=&public=false&collection=journals&handle=hein.journals/crmrev40&men_hide=false&men_tab=toc&kind=&page=340)
+This example is a spatial-temporal interaction analysis of Houston burglary and shooting crimes. The analysis of this study covers 12 super neighborhoods in Houston's southwest quadrant with Knox method for space-time interaction. Unique clustering signatures of each type of crime event is suggested in the findings.
+![example01_screenshot](https://github.com/GEO511-2021/2021_case_studies-FanLukeLi/blob/master/week_07/example01.jpg)
+
+This example is clear in the research question and has detailed background research about spatial-temporal interactions of crime. Therefore, this study could be referenced to suggest what variables and statistics to look at in this project. 
+
+## Example 2
+[]
+
+## Example 3
+
+## Example 4
+
+# Proposed data sources
+
+# Proposed methods
+
+# Expected results
