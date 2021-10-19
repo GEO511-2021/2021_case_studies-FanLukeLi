@@ -99,6 +99,20 @@ to:
 
 [spatial](https://www.tidyverse.org/packages/)
 
-The tidyverse package will be used to
+The tidyverse, spData and spatial packages will be used to read, tidy
+and manipulate the data into the form wanted. The maps package will be
+used to map the shooting incident into scatter points on the census
+tract map of New York city. The maps package will also be used to create
+a choropleth map of number of incidents based on New York city census
+tracts and clusters of incidents. The package surveillance will be used
+on spatial analysis of the data, that is to perform Knox test to find
+space-time interactions of the data.
 
 # Expected results
+
+This project is intended to perform Knox test analysis on shooting
+incident data of New York city and map the clusters based on NYC census
+tract. Expected production of this project include spatial statistics
+report of Knox test, choropleth map of crime incidents in NYC and
+clusters of crime incidents mapped onto census tract basemap of New York
+city.
