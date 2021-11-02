@@ -25,15 +25,17 @@ World <- map_data("world")
 ggplot(storm_data_obj) + 
   geom_map(
     data = World, map = World,
-    aes(x = long, y = lat, map_id = region),
+    aes(map_id = region),
     color = "black", fill = "lightgray", size  =0.1
   ) + 
-  stat_bin2d(aes(y = st_coordinates(storm_data_obj)[,2], 
+  stat_bin2d(aes(y = st_coordinates(storm_data_obj)[,2],
                  x = st_coordinates(storm_data_obj)[,1]),
-             bins = 100) + 
+             bins = 100) +
   facet_wrap(~decade) + 
   scale_fill_distiller(palette = "YlOrRd", trans = "log", direction = -1, breaks = c(1, 10, 100, 1000)) + 
-  coord_sf(ylim = region[c(2,4)], xlim = region[c(1,3)])
+  coord_sf(ylim = region[c(2,4)], xlim = region[c(1,3)]) + 
+  xlab("Longitude") + 
+  ylab("Latitude")
 
 states <- us_states %>% 
   st_transform(st_crs(storm_data_obj)) %>% 
