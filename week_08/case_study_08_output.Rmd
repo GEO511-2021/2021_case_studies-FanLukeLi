@@ -1,0 +1,35 @@
+---
+title: "Case Study 08"
+author: "Fan Li"
+date: "2021/10/26"
+output: 
+  html_document: default
+  github_document: default
+  powerpoint_presentation: default
+  word_document: default
+---
+
+```{r echo = F}
+library(tidyverse)
+library(kableExtra)
+library(rmarkdown)
+library(knitr)
+
+co2_annmean <- read_table("ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt", skip = 57)
+
+names(co2_annmean) <- c("year", "mean", "unc")
+
+plot <- co2_annmean %>% 
+  ggplot(aes(year, mean)) + 
+  geom_point()
+
+plot
+
+co2_annmean %>% 
+  kable()
+
+co2_annmean %>% 
+  kable() %>% 
+  as_image(width = 10, file = "table.png")
+```
+
